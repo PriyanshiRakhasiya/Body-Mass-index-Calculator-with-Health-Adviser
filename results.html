@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI Analysis Results</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        /* General Styling */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background: #f5f5f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+            color: #333;
+        }
+
+        .container {
+            background: linear-gradient(135deg, #8e44ad, #3498db);
+            width: 450px;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.3);
+            text-align: center;
+            animation: fadeIn 1.2s ease-in-out;
+            color: white;
+        }
+
+        h1 {
+            font-size: 28px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: #f5f5f5;
+        }
+
+        p {
+            font-size: 18px;
+            margin: 10px 0;
+        }
+
+        .bmi-value {
+            font-size: 26px;
+            font-weight: bold;
+            color: #ffd700;
+        }
+
+        .category {
+            font-size: 22px;
+            font-weight: 600;
+            color: #2ecc71;
+        }
+
+        .advice-box {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 15px;
+            border-radius: 10px;
+            margin-top: 20px;
+            font-size: 16px;
+            color: #fff;
+            box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        a {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 12px 20px;
+            font-size: 16px;
+            text-decoration: none;
+            background: #ff4500;
+            color: white;
+            border-radius: 10px;
+            transition: 0.3s ease-in-out;
+            font-weight: 600;
+        }
+
+        a:hover {
+            background: #ff6347;
+            transform: scale(1.05);
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>BMI Analysis Results</h1>
+        <p><strong>Your BMI:</strong> <span class="bmi-value">{{ bmi }}</span></p>
+        <p><strong>Category:</strong> <span class="category">{{ category }}</span></p>
+        <p><strong>Age:</strong> <span class="age">{{ age }}</span></p>
+        <p><strong>Gender:</strong> <span class="gender">{{ gender }}</span></p>
+        <div class="advice-box">
+            <p><strong>Health Advice:</strong> {{ advice }}</p>
+        </div>
+        <a href="/">Back to Home</a>
+    </div>
+</body>
+
+</html>
